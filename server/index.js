@@ -9,6 +9,13 @@ const app = express()
 
 app.use(express.json())
 
+//Users
+// app.get('/', ctrl.getUsers)
+app.post('/', ctrl.addUser)
+
+
+//Posts
+
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
